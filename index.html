@@ -4,85 +4,96 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <title>Phantom Thieves - Take Your Heart</title>
   </head>
   <body>
-    <header>
-      <div class="header-container">
-        <div class="logo">
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">
           <img src="./images/logo.jpg" alt="Phantom Thieves Logo" />
         </div>
-        <ul class="header-links">
-          <h3>About</h3>
-          <h3>Forum</h3>
-          <h3>Vote</h3>
-        </ul>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item"><a href="#about">About</a></li>
+            <li class="header__nav-item"><a href="#forum">Forum</a></li>
+            <li class="header__nav-item"><a href="#vote">Vote</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
+    
     <section class="hero">
-      <div class="hero-text-box">
-        <div class="hero-text">
-          <h1>Take Your Heart!</h1>
-          <p>
-            Welcome to the Phantom Aficianado website, to talk about all things
-            phantom thieves!
-          </p>
-          <button class="button hero-button">For Real?!</button>
-        </div>
-        <div class="hero-image">
-          <img src="./images/hero-img.jpg" alt="Phantom Thieves" />
-        </div>
-      </div>
-    </section>
-    <section class="information-wrapper">
-      <div class="information-wrapper-header">
-        Meet some members from the team!
-      </div>
-      <div class="cards-container">
-        <div class="card">
-          <img class="card-image" src="./images/ryujisprite.jpg" alt="Skull" />
-          <h2>SKULL</h2>
-          <div class="card-text">Physical/Electric</div>
-        </div>
-        <div class="card">
-          <img class="card-image" src="./images/annsprite.png" alt="Ann" />
-          <h2>PANTHER</h2>
-          <div class="card-text">Fire/Healer</div>
-        </div>
-        <div class="card">
-          <img class="card-image" src="./images/makotosprite.png" alt="Queen" />
-          <h2>Queen</h2>
-          <div class="card-text">Nuke/Healer/Support</div>
-        </div>
-        <div class="card">
-          <img class="card-image" src="./images/jokersprite.jpg" alt="Joker" />
-          <h2>JOKER</h2>
-          <div class="card-text">Leader/Wildcard</div>
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__text">
+            <h1>Take Your Heart!</h1>
+            <p>
+              Welcome to the Phantom Aficionado website, to talk about all things
+              phantom thieves!
+            </p>
+            <button class="hero__button">For Real?!</button>
+          </div>
+          <div class="hero__image">
+            <img src="./images/hero-img.jpg" alt="Phantom Thieves" />
+          </div>
         </div>
       </div>
     </section>
-    <section class="quote-wrapper">
-      <div class="quote container">
-        <div>
-          <h2>
+    
+    <section class="team">
+      <div class="container">
+        <h2 class="team__title">Meet some members from the team!</h2>
+        <div class="team__cards">
+          <div class="card">
+            <img class="card__image" src="./images/ryujisprite.jpg" alt="Skull" />
+            <h3 class="card__title">SKULL</h3>
+            <p class="card__text">Physical/Electric</p>
+          </div>
+          <div class="card">
+            <img class="card__image" src="./images/annsprite.png" alt="Ann" />
+            <h3 class="card__title">PANTHER</h3>
+            <p class="card__text">Fire/Healer</p>
+          </div>
+          <div class="card">
+            <img class="card__image" src="./images/makotosprite.png" alt="Queen" />
+            <h3 class="card__title">QUEEN</h3>
+            <p class="card__text">Nuke/Healer/Support</p>
+          </div>
+          <div class="card">
+            <img class="card__image" src="./images/jokersprite.jpg" alt="Joker" />
+            <h3 class="card__title">JOKER</h3>
+            <p class="card__text">Leader/Wildcard</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="quote">
+      <div class="container">
+        <blockquote class="quote__content">
+          <h2 class="quote__text">
             That's not just the phantom thieves, that's some super demon lord!
             So awesome!
           </h2>
-          <p class="quote-author">-Random Dude</p>
+          <cite class="quote__author">-Random Dude</cite>
+        </blockquote>
+      </div>
+    </section>
+    
+    <section class="cta">
+      <div class="container">
+        <div class="cta__content">
+          <div class="cta__text">
+            <h3>Do YOU believe in the phantom thieves?</h3>
+            <p>Put in your vote now!</p>
+          </div>
+          <button class="cta__button" type="button">Vote</button>
         </div>
       </div>
     </section>
-    <section class="cta-wrapper">
-      <div class="cta container">
-        <div class="cta-text">
-          <h4>Do YOU believe in the phantom thieves?</h4>
-          <p>Put in your vote now!</p>
-        </div>
-        <button class="btn btn-cta" type="button">Vote</button>
-      </div>
-    </section>
-    <footer>
-      <div class="footer container">
+    
+    <footer class="footer">
+      <div class="container">
         <p>Copyright &copy; Phantom Thieves 2025</p>
       </div>
     </footer>

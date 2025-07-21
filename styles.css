@@ -19,57 +19,67 @@
   font-style: normal;
 }
 
-body{
-  font-family: 'Roboto', arial;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: auto;
-  position: static;
+body {
+  font-family: 'Roboto', arial, sans-serif;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
   background-color: black;
   height: 96px;
 }
 
-.logo {
-  width: 80px;
-  height: 80px;
+.header .container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-start;
-  margin-left: 100px;
+  height: 100%;
 }
 
-.logo img {
+.header__logo {
+  width: 80px;
+  height: 80px;
+  margin-left: 80px;
+}
+
+.header__logo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
-  
 }
 
-.header-links {
+.header__nav-list {
   list-style-type: none;
-  /* padding: 0; */
   display: flex;
+  gap: 30px;
+}
+
+.header__nav-item a {
   color: white;
   font-family: 'menufont', sans-serif;
   font-size: 36px;
+  text-decoration: none;
 }
 
-.header-links h3 {
-  margin: 0 15px;
+.header__nav-item a:hover {
+  opacity: 0.8;
 }
 
+/* Hero */
 .hero {
   display: flex;
   color: #F9FAF8;
@@ -78,37 +88,25 @@ body{
   justify-content: center;
   background-image: url('./images/citybackground.jpg');
   background-position: center;
-  background-size: cover; 
-  min-height: 500px; /* Increased height */
+  background-size: cover;
+  min-height: 500px;
+  padding: 100px 0;
 }
 
-.hero-text-box {
+.hero__content {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   max-width: 1500px;
-  margin: 128px 100px 72px 100px;
   gap: 24px;
-  padding: 50px 50px 50px 50px;
+  padding: 50px;
   border: 3px solid skyblue;
   border-radius: 50px;
-  box-shadow: 2px 2px 20px 2px;
+  box-shadow: 2px 2px 20px 2px rgba(0,0,0,0.5);
   background: rgba(46, 46, 46, 0.7);
 }
 
-.hero-text-box h1{
-  font-size: 64px;
-  margin: 0;
-  font-family: 'menufont', sans-serif;
-}
-
-.hero-text-box p{
-  font-size: 32px;
-  margin: 0;
-  font-family: 'p5hatty', sans-serif;
-}
-
-.hero-text{
+.hero__text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -116,65 +114,88 @@ body{
   flex: 1;
 }
 
-.hero-text button {
-  align-self: center; 
-  margin-top: 20px; 
+.hero__text h1 {
+  font-size: 64px;
+  margin: 0 0 20px 0;
+  font-family: 'menufont', sans-serif;
 }
 
-.hero-image {
+.hero__text p {
+  font-size: 32px;
+  margin: 0 0 20px 0;
+  font-family: 'p5hatty', sans-serif;
+}
+
+.hero__button {
+  align-self: center;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 36px;
+  font-family: 'menufont', sans-serif;
+  background-color: skyblue;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hero__button:hover {
+  background-color: #87ceeb;
+}
+
+.hero__image {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+}
+
+.hero__image img {
+  max-width: 700px;
+  max-height: 700px;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
   border-radius: 50px;
 }
 
-.hero-image img{
-  flex: 1 1 auto;
-  max-width: 700px;
-  max-height: 700px;
-  box-shadow: 2px 2px 3px;
+/* Team Section */
+.team {
+  padding: 60px 0;
+  background-color: rgb(89, 0, 0);
 }
 
-.information-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.information-wrapper-header {
+.team__title {
   width: 100%;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-size: 48px;
   font-family: 'markin', sans-serif;
 }
 
-.cards-container {
+.team__cards {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Adjust the spacing between cards */
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
   padding: 15px;
   text-align: center;
+  max-width: 300px;
 }
 
-.card h2{
+.card__title {
   font-size: 36px;
   margin-bottom: 10px;
   font-family: 'menufont', sans-serif;
 }
 
-.card-text{
+.card__text {
   font-size: 24px;
   margin-bottom: 10px;
   font-family: 'markin', sans-serif;
 }
 
-.card-image {
+.card__image {
   width: 300px;
   height: 300px;
   aspect-ratio: 1 / 1;
@@ -183,4 +204,100 @@ body{
   border-radius: 8px;
   border: 12px solid white;
   box-shadow: 2px 2px 3px black;
+  margin-bottom: 15px;
+}
+
+/* Quote Section */
+.quote {
+  background-color: #f3f4f6;
+  padding: 10px 0;
+}
+
+.quote__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 200px; /* Adjust as needed for spacing */
+}
+
+.quote__text {
+  font-size: 36px;
+  font-style: italic;
+  margin-bottom: 20px;
+  font-family: 'p5hatty', sans-serif;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.quote__author {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'markin', sans-serif;
+  text-align: right;
+  align-self: flex-end;
+}
+
+/* CTA Section */
+.cta {
+  background-color: #3882f6;
+  padding: 10px 0;
+  color: white;
+}
+
+.cta__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  background-color: #3882f6;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.cta__text h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-family: 'p5hatty', sans-serif;
+}
+
+.cta__text p {
+  font-size: 24px;
+  opacity: 0.8;
+  font-family: 'markin', sans-serif;
+}
+
+.cta__button {
+  padding: 12px 32px;
+  background-color: red;
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  font-size: 30px;
+  font-family: 'menufont', sans-serif;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.cta__button:hover {
+  background-color: white;
+  color: #3882f6;
+}
+
+/* Footer */
+.footer {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.footer p {
+  font-size: 18px;
+  font-family: 'markin', sans-serif;
 }
